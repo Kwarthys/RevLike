@@ -1,33 +1,42 @@
 # depslib dependency file v1.0
-1678213539 source:e:\documents\codeblocksprojects\revlike\main.cpp
+1678276413 source:e:\documents\codeblocksprojects\revlike\main.cpp
 	<iostream>
+	"GameManager.h"
 	"Player.h"
 	"Monster.h"
+	"Stats.h"
 
-1678209941 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1678276460 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
-1678209941 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+1678276227 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+	"Living.h"
 
-1678213369 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
+1678273920 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
 	<iostream>
 
-1678213522 e:\documents\codeblocksprojects\revlike\include\player.h
+1678273898 e:\documents\codeblocksprojects\revlike\include\player.h
 	"Living.h"
 
 1678211012 e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
 
-1678213499 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
+1678275246 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
 	"Living.h"
 	<iostream>
 
-1678212815 e:\documents\codeblocksprojects\revlike\include\living.h
+1678274640 e:\documents\codeblocksprojects\revlike\include\living.h
+	"Stats.h"
 
-1678212708 source:e:\documents\codeblocksprojects\revlike\src\monster.cpp
+1678273926 source:e:\documents\codeblocksprojects\revlike\src\monster.cpp
 	"Monster.h"
 
-1678212889 e:\documents\codeblocksprojects\revlike\include\monster.h
+1678273894 e:\documents\codeblocksprojects\revlike\include\monster.h
 	"Living.h"
+
+1678275469 e:\documents\codeblocksprojects\revlike\include\stats.h
+
+1678273757 source:e:\documents\codeblocksprojects\revlike\src\stats.cpp
+	"Stats.h"
 

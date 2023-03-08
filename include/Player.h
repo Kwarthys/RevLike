@@ -6,7 +6,7 @@
 class Player : public Living
 {
     public:
-        Player(char* name, int health);
+        Player(char* name, int health, Stats* stats);
         virtual ~Player();
 
     protected:

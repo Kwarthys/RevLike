@@ -1,12 +1,8 @@
 #include "Monster.h"
 
-Monster::Monster(char* name, int maxHealth)
+Monster::Monster(char* name, int maxHealth, Stats* stats) : Living(name, maxHealth, stats)
 {
-    this->name = name;
-    this->health = maxHealth;
 }
 
 Monster::~Monster()
-{
-    delete[] name;
-}
+{}
