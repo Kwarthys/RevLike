@@ -2,6 +2,7 @@
 #define GAMEMANAGER_H
 
 #include "Living.h"
+#include "PlayerInputs.h"
 
 class GameManager
 {
@@ -9,7 +10,7 @@ class GameManager
         GameManager();
         virtual ~GameManager();
 
-        void manageEncounter(Living* a, Living* b);
+        void manageEncounter(Living* player, Living* monsters[], int monsterNumber);
 
     protected:
 

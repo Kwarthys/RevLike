@@ -3,6 +3,10 @@
 
 #include "Stats.h"
 
+#include <iostream>
+#include <sstream>
+using namespace std;
+
 class Living
 {
     public:
@@ -18,6 +22,8 @@ class Living
         void takeDamage(int amount);
         void attack(Living* target);
         bool isAlive(){return health > 0;}
+
+        string display();
 
     protected:
 

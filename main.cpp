@@ -24,13 +24,18 @@ int main()
     monsterStats->m_damage = 25;
     monsterStats->m_speed = 3;
 
-    char * monstersName = "Monster";
-    Monster monster(monstersName, 50, monsterStats);
+    char monstersName[30] = "Monster";
+    Monster monster1(monstersName, 50, monsterStats);
+    Monster monster2(monstersName, 50, monsterStats); //shared stats, this should not be an issue for now (will be with modifiers)
+
+    Monster* monsters[2];
+    monsters[0] = &monster1;
+    monsters[1] = &monster2;
 
     cout << "Hello " << player.name << endl;
 
     GameManager manager;
-    manager.manageEncounter(&player, &monster);
+    manager.manageEncounter(&player, monsters, 2);
 
     delete playerStats;
     delete monsterStats;

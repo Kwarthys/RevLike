@@ -10,40 +10,24 @@ GameManager::~GameManager()
     //dtor
 }
 
-void GameManager::manageEncounter(Living* a, Living* b)
+void GameManager::manageEncounter(Living* player, Living* monsters[], int monsterNumber)
 {
-    int gameCounter = 1;
-
-    Living* fast;
-    Living* slow;
-
-    if(a->m_stats->m_speed <= b->m_stats->m_speed)
+    bool monstersAlive = true;
+    while(player->isAlive() && monstersAlive)
     {
-        fast = a;
-        slow = b;
-    }
-    else
-    {
-        fast = b;
-        slow = a;
-    }
-
-    while(a->isAlive() && b->isAlive())
-    {
-        if(gameCounter % fast->m_stats->m_speed == 0)
+        cout << "Who to attack ?" << endl;
+        //building monsters options
+        string options[monsterNumber];
+        for(int i = 0; i < monsterNumber; ++i)
         {
-            fast->attack(slow);
+            options[i] = monsters[i]->display();
         }
 
-        if(slow->isAlive())
+        int choice = PlayerInputs::getPlayerChoice(options, monsterNumber);
+
+        if(choice > 0 && choice < monsterNumber)
         {
-            if(gameCounter % slow->m_stats->m_speed == 0)
-            {
-                slow->attack(fast);
-            }
+            player->attack(monsters[choice]);
         }
-
-        gameCounter++;
     }
-
 }

@@ -1,5 +1,4 @@
 #include "Living.h"
-#include <iostream>
 
 Living::Living(char* name,  int health, Stats* stats)
 {
@@ -29,4 +28,11 @@ void Living::takeDamage(int amount)
 void Living::attack(Living* target)
 {
     target->takeDamage(this->m_stats->m_damage);
+}
+
+string Living::display()
+{
+    ostringstream data;
+    data << name << "(" << health << ") : " << m_stats->m_damage << " - " << m_stats->m_armor << endl;
+    return data.str();
 }
