@@ -2,10 +2,39 @@
 
 Stats::Stats()
 {
-    //ctor
+    m_damage = 0;
+    m_armor = 0;
+    m_speed = 0;
+    m_crit = 0;
 }
 
 Stats::~Stats()
 {
     //dtor
+}
+
+std::string Stats::display()
+{
+    std::ostringstream data;
+    if(m_armor != 0)
+    {
+        data << "Armor: " << m_armor << "\n";
+    }
+
+    if(m_crit != 0)
+    {
+        data << "Crit: " << m_crit << "\n";
+    }
+
+    if(!m_speed != 0)
+    {
+        data << "Speed: " << m_speed << "\n";
+    }
+
+    if(m_damage != 0)
+    {
+        data << "Damage: " << m_damage << "\n";
+    }
+
+    return data.str();
 }

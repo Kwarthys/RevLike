@@ -7,10 +7,10 @@
 	"Monster.h"
 	"Stats.h"
 
-1678368684 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1678398910 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
-1678319816 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+1678398916 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
 	<vector>
 	"Living.h"
 	"PlayerInputs.h"
@@ -40,9 +40,11 @@
 	<iostream>
 	"Living.h"
 
-1678366520 e:\documents\codeblocksprojects\revlike\include\stats.h
+1678398562 e:\documents\codeblocksprojects\revlike\include\stats.h
+	<string>
+	<sstream>
 
-1678273757 source:e:\documents\codeblocksprojects\revlike\src\stats.cpp
+1678398649 source:e:\documents\codeblocksprojects\revlike\src\stats.cpp
 	"Stats.h"
 
 1678368288 source:e:\documents\codeblocksprojects\revlike\src\playerinputs.cpp

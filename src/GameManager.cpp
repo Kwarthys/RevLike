@@ -10,6 +10,17 @@ GameManager::~GameManager()
     //dtor
 }
 
+void GameManager::manageLooting(Living& player, std::vector<Stats>& loots)
+{
+    vector<string> options;
+    for(size_t i = 0; i < loots.size(); ++i)
+    {
+        options.push_back(loots.at(i).display());
+    }
+
+    int choice = PlayerInputs::getPlayerChoice(options, false);
+}
+
 void GameManager::manageEncounter(Living& player, vector<Living*>& monsters)
 {
     bool monstersAlive = true;

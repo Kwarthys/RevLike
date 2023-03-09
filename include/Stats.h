@@ -1,6 +1,8 @@
 #ifndef STATS_H
 #define STATS_H
 
+#include <string>
+#include <sstream>
 
 class Stats
 {
@@ -12,6 +14,8 @@ class Stats
         int m_armor;
         int m_speed;
         int m_crit;
+
+        std::string display();
 
     protected:
 

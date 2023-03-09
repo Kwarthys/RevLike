@@ -13,6 +13,8 @@ class GameManager
 
         void manageEncounter(Living& player, std::vector<Living*>& monsters);
 
+        void manageLooting(Living& player, std::vector<Stats>& loots);
+
     protected:
 
     private:
