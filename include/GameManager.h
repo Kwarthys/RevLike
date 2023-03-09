@@ -1,6 +1,7 @@
 #ifndef GAMEMANAGER_H
 #define GAMEMANAGER_H
 
+#include <vector>
 #include "Living.h"
 #include "PlayerInputs.h"
 
@@ -10,7 +11,7 @@ class GameManager
         GameManager();
         virtual ~GameManager();
 
-        void manageEncounter(Living* player, Living* monsters[], int monsterNumber);
+        void manageEncounter(Living& player, std::vector<Living*>& monsters);
 
     protected:
 

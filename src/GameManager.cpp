@@ -10,24 +10,32 @@ GameManager::~GameManager()
     //dtor
 }
 
-void GameManager::manageEncounter(Living* player, Living* monsters[], int monsterNumber)
+void GameManager::manageEncounter(Living& player, vector<Living*>& monsters)
 {
     bool monstersAlive = true;
-    while(player->isAlive() && monstersAlive)
+    while(player.isAlive() && monstersAlive)
     {
         cout << "Who to attack ?" << endl;
         //building monsters options
-        string options[monsterNumber];
-        for(int i = 0; i < monsterNumber; ++i)
+        vector<string> options;
+        for(size_t i = 0; i < monsters.size(); ++i)
         {
-            options[i] = monsters[i]->display();
+            options.push_back(monsters.at(i)->display());
         }
 
-        int choice = PlayerInputs::getPlayerChoice(options, monsterNumber);
+        int choice = PlayerInputs::getPlayerChoice(options);
 
-        if(choice > 0 && choice < monsterNumber)
+        if(choice >= 0 && choice < monsters.size())
         {
-            player->attack(monsters[choice]);
+            player.attack(monsters.at(choice));
+        }
+
+        monstersAlive = false;
+        for(size_t i = 0; i < monsters.size(); ++i)
+        {
+            monstersAlive = monstersAlive || monsters.at(i)->isAlive();
         }
     }
+
+    cout << "Victory !" << endl; // what a victory screen
 }

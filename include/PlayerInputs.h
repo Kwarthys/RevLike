@@ -2,6 +2,7 @@
 #define PLAYERINPUTS_H
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -11,7 +12,7 @@ class PlayerInputs
         PlayerInputs();
         virtual ~PlayerInputs();
 
-        static int getPlayerChoice(string* options, int numberOfOptions);
+        static int getPlayerChoice(std::vector<string> options);
 
     protected:
 

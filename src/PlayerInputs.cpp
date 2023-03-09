@@ -10,14 +10,14 @@ PlayerInputs::~PlayerInputs()
     //dtor
 }
 
-int PlayerInputs::getPlayerChoice(string* options, int numberOfOptions)
+int PlayerInputs::getPlayerChoice(std::vector<string> options)
 {
-    cout << "What will you do ?" << endl;
-    for(int i = 0; i < numberOfOptions; ++i)
+    for(std::size_t i = 0; i < options.size(); ++i)
     {
-        cout << i << ": " << options[i] << endl;
+        cout << (i+1) << ": " << options.at(i) << endl;
     }
 
+    cout << "What will you do ?" << endl;
     int response;
     cin >> response;
 

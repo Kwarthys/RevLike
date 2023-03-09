@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1678286514 source:e:\documents\codeblocksprojects\revlike\main.cpp
+1678319821 source:e:\documents\codeblocksprojects\revlike\main.cpp
 	<iostream>
+	<vector>
 	"GameManager.h"
 	"Player.h"
 	"Monster.h"
 	"Stats.h"
-	"PlayerInputs.h"
 
-1678287064 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1678320880 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
-1678287056 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+1678319816 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+	<vector>
 	"Living.h"
 	"PlayerInputs.h"
 
@@ -43,9 +44,10 @@
 1678273757 source:e:\documents\codeblocksprojects\revlike\src\stats.cpp
 	"Stats.h"
 
-1678286703 source:e:\documents\codeblocksprojects\revlike\src\playerinputs.cpp
+1678320840 source:e:\documents\codeblocksprojects\revlike\src\playerinputs.cpp
 	"PlayerInputs.h"
 
-1678286496 e:\documents\codeblocksprojects\revlike\include\playerinputs.h
+1678320822 e:\documents\codeblocksprojects\revlike\include\playerinputs.h
 	<iostream>
+	<vector>
 
