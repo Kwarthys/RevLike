@@ -26,7 +26,7 @@ std::string Stats::display()
         data << "Crit: " << m_crit << "\n";
     }
 
-    if(!m_speed != 0)
+    if(m_speed != 0)
     {
         data << "Speed: " << m_speed << "\n";
     }
@@ -37,4 +37,12 @@ std::string Stats::display()
     }
 
     return data.str();
+}
+
+void Stats::add(Stats toAdd)
+{
+    m_armor += toAdd.m_armor;
+    m_crit += toAdd.m_crit;
+    m_speed += toAdd.m_speed;
+    m_damage += toAdd.m_damage;
 }

@@ -1,10 +1,10 @@
 #ifndef LIVING_H
 #define LIVING_H
 
-#include "Stats.h"
-
 #include <iostream>
 #include <sstream>
+#include "Stats.h"
+
 using namespace std;
 
 class Living
@@ -17,11 +17,13 @@ class Living
         int health;
         int maxHealth;
         string name;
-        Stats m_stats;
+        Stats stats;
 
         void takeDamage(int amount);
-        void attack(Living* target);
+        void attack(Living& target);
         bool isAlive(){return health > 0;}
+
+        void loot(Stats stats);
 
         string display();
 

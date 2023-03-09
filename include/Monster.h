@@ -7,7 +7,7 @@
 class Monster : public Living
 {
     public:
-        Monster(string name,  int health, Stats stats);
+        Monster(string name, int health, Stats stats);
         virtual ~Monster();
 
     protected:

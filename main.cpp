@@ -40,6 +40,28 @@ int main()
     GameManager manager;
     manager.manageEncounter(player, monsters);
 
+
+
+    cout << player.stats.display();
+
+    Stats loot1;
+    loot1.m_armor = 1;
+
+    Stats loot2;
+    loot2.m_damage = 5;
+
+    Stats loot3;
+    loot3.m_crit = 5;
+
+    vector<Stats> loots;
+    loots.push_back(loot1);
+    loots.push_back(loot2);
+    loots.push_back(loot3);
+
+    manager.manageLooting(player, loots);
+
+    cout << player.stats.display();
+
     if(player.isAlive())
     {
         cout << "Victory !" << endl; // what a victory screen

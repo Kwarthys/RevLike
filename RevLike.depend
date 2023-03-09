@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1678368586 source:e:\documents\codeblocksprojects\revlike\main.cpp
+1678403753 source:e:\documents\codeblocksprojects\revlike\main.cpp
 	<iostream>
 	<vector>
 	"GameManager.h"
@@ -7,7 +7,7 @@
 	"Monster.h"
 	"Stats.h"
 
-1678398910 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1678403539 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
 1678398916 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
@@ -25,26 +25,26 @@
 1678211012 e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
 
-1678367893 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
+1678403493 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
 	"Living.h"
 
-1678364928 e:\documents\codeblocksprojects\revlike\include\living.h
-	"Stats.h"
+1678403676 e:\documents\codeblocksprojects\revlike\include\living.h
 	<iostream>
 	<sstream>
+	"Stats.h"
 
 1678364969 source:e:\documents\codeblocksprojects\revlike\src\monster.cpp
 	"Monster.h"
 
-1678365046 e:\documents\codeblocksprojects\revlike\include\monster.h
+1678403164 e:\documents\codeblocksprojects\revlike\include\monster.h
 	<iostream>
 	"Living.h"
 
-1678398562 e:\documents\codeblocksprojects\revlike\include\stats.h
+1678403296 e:\documents\codeblocksprojects\revlike\include\stats.h
 	<string>
 	<sstream>
 
-1678398649 source:e:\documents\codeblocksprojects\revlike\src\stats.cpp
+1678403372 source:e:\documents\codeblocksprojects\revlike\src\stats.cpp
 	"Stats.h"
 
 1678368288 source:e:\documents\codeblocksprojects\revlike\src\playerinputs.cpp

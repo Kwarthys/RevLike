@@ -5,7 +5,7 @@ Living::Living(string name, int health, Stats stats)
     this->name = name;
     this->maxHealth = health;
     this->health = health;
-    this->m_stats = stats;
+    this->stats = stats;
 }
 
 Living::~Living()
@@ -21,7 +21,7 @@ void Living::takeDamage(int amount)
         return;
     }
 
-    int reducedDamage = amount - m_stats.m_armor;
+    int reducedDamage = amount - stats.m_armor;
     if(reducedDamage < 0)
     {
         reducedDamage = 0;
@@ -33,22 +33,22 @@ void Living::takeDamage(int amount)
         health = 0;
     }
 
-    std::cout << name << " takes " << reducedDamage << "(" << amount << "-" << m_stats.m_armor << ") damage.\n" << std::endl;
+    std::cout << name << " takes " << reducedDamage << "(" << amount << "-" << stats.m_armor << ") damage.\n" << std::endl;
 }
 
-void Living::attack(Living* target)
+void Living::attack(Living& target)
 {
-    int damage = m_stats.m_damage;
+    int damage = stats.m_damage;
 
-    std::cout << name << " attacks " << target->name << std::endl;
+    std::cout << name << " attacks " << target.name << std::endl;
 
-    if(rand()%100+1 < m_stats.m_crit)
+    if(rand()%100+1 < stats.m_crit)
     {
         std::cout << "CRIT" << std::endl;
         damage *= 2;
     }
 
-    target->takeDamage(damage);
+    target.takeDamage(damage);
 }
 
 string Living::display()
@@ -56,11 +56,16 @@ string Living::display()
     ostringstream data;
     if(isAlive())
     {
-        data << name << "(" << health << ") : " << m_stats.m_damage << "(" << m_stats.m_crit << "%) - " << m_stats.m_armor;
+        data << name << "(" << health << ") : " << stats.m_damage << "(" << stats.m_crit << "%) - " << stats.m_armor;
     }
     else
     {
         data << "Dead" << endl;
     }
     return data.str();
+}
+
+void Living::loot(Stats stats)
+{
+    this->stats.add(stats);
 }

@@ -19,6 +19,11 @@ void GameManager::manageLooting(Living& player, std::vector<Stats>& loots)
     }
 
     int choice = PlayerInputs::getPlayerChoice(options, false);
+
+    if(choice >= 0 && choice < loots.size())
+    {
+        player.loot(loots.at(choice));
+    }
 }
 
 void GameManager::manageEncounter(Living& player, vector<Living*>& monsters)
@@ -40,7 +45,7 @@ void GameManager::manageEncounter(Living& player, vector<Living*>& monsters)
 
         if(choice >= 0 && choice < monsters.size())
         {
-            player.attack(monsters.at(choice));
+            player.attack(*monsters.at(choice));
 
             if(!monsters.at(choice)->isAlive())
             {
@@ -58,7 +63,7 @@ void GameManager::manageEncounter(Living& player, vector<Living*>& monsters)
 
             if(alive)
             {
-                monsters.at(i)->attack(&player);
+                monsters.at(i)->attack(player);
             }
         }
         if(monstersAlive)

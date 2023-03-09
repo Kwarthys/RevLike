@@ -17,6 +17,8 @@ class Stats
 
         std::string display();
 
+        void add(Stats toAdd);
+
     protected:
 
     private:
