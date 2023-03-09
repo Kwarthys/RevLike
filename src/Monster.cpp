@@ -1,6 +1,6 @@
 #include "Monster.h"
 
-Monster::Monster(char* name, int maxHealth, Stats* stats) : Living(name, maxHealth, stats)
+Monster::Monster(string name, int maxHealth, Stats stats) : Living(name, maxHealth, stats)
 {
 }
 

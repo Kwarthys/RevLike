@@ -11,6 +11,7 @@ class Stats
         int m_damage;
         int m_armor;
         int m_speed;
+        int m_crit;
 
     protected:
 

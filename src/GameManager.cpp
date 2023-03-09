@@ -15,6 +15,8 @@ void GameManager::manageEncounter(Living& player, vector<Living*>& monsters)
     bool monstersAlive = true;
     while(player.isAlive() && monstersAlive)
     {
+        cout << player.display() << endl;
+
         cout << "Who to attack ?" << endl;
         //building monsters options
         vector<string> options;
@@ -28,14 +30,31 @@ void GameManager::manageEncounter(Living& player, vector<Living*>& monsters)
         if(choice >= 0 && choice < monsters.size())
         {
             player.attack(monsters.at(choice));
+
+            if(!monsters.at(choice)->isAlive())
+            {
+                cout << "\nYou killed " << monsters.at(choice)->name << " !\n" << endl;
+            }
+
+            PlayerInputs::waitPlayerPause();
         }
 
         monstersAlive = false;
         for(size_t i = 0; i < monsters.size(); ++i)
         {
-            monstersAlive = monstersAlive || monsters.at(i)->isAlive();
+            bool alive =  monsters.at(i)->isAlive();
+            monstersAlive = monstersAlive || alive;
+
+            if(alive)
+            {
+                monsters.at(i)->attack(&player);
+            }
+        }
+        if(monstersAlive)
+        {
+            PlayerInputs::waitPlayerPause();
         }
     }
 
-    cout << "Victory !" << endl; // what a victory screen
+    cout << "End of encounter" << endl;
 }

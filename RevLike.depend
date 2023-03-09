@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1678319821 source:e:\documents\codeblocksprojects\revlike\main.cpp
+1678368586 source:e:\documents\codeblocksprojects\revlike\main.cpp
 	<iostream>
 	<vector>
 	"GameManager.h"
@@ -7,7 +7,7 @@
 	"Monster.h"
 	"Stats.h"
 
-1678320880 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1678368684 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
 1678319816 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
@@ -15,39 +15,41 @@
 	"Living.h"
 	"PlayerInputs.h"
 
-1678273920 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
+1678365085 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
-	<iostream>
 
-1678273898 e:\documents\codeblocksprojects\revlike\include\player.h
+1678365199 e:\documents\codeblocksprojects\revlike\include\player.h
+	<iostream>
 	"Living.h"
 
 1678211012 e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
 
-1678286296 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
+1678367893 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
 	"Living.h"
 
-1678286334 e:\documents\codeblocksprojects\revlike\include\living.h
+1678364928 e:\documents\codeblocksprojects\revlike\include\living.h
 	"Stats.h"
 	<iostream>
 	<sstream>
 
-1678273926 source:e:\documents\codeblocksprojects\revlike\src\monster.cpp
+1678364969 source:e:\documents\codeblocksprojects\revlike\src\monster.cpp
 	"Monster.h"
 
-1678273894 e:\documents\codeblocksprojects\revlike\include\monster.h
+1678365046 e:\documents\codeblocksprojects\revlike\include\monster.h
+	<iostream>
 	"Living.h"
 
-1678275469 e:\documents\codeblocksprojects\revlike\include\stats.h
+1678366520 e:\documents\codeblocksprojects\revlike\include\stats.h
 
 1678273757 source:e:\documents\codeblocksprojects\revlike\src\stats.cpp
 	"Stats.h"
 
-1678320840 source:e:\documents\codeblocksprojects\revlike\src\playerinputs.cpp
+1678368288 source:e:\documents\codeblocksprojects\revlike\src\playerinputs.cpp
 	"PlayerInputs.h"
 
-1678320822 e:\documents\codeblocksprojects\revlike\include\playerinputs.h
+1678366759 e:\documents\codeblocksprojects\revlike\include\playerinputs.h
 	<iostream>
 	<vector>
+	<limits>
 

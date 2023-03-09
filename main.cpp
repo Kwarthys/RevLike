@@ -13,17 +13,19 @@ int main()
     char name[30] = "Player";
     //cin >> name;
 
-    Stats* playerStats = new Stats();
-    playerStats->m_armor = 1;
-    playerStats->m_damage = 30;
-    playerStats->m_speed = 1;
+    Stats playerStats;
+    playerStats.m_armor = 1;
+    playerStats.m_damage = 20;
+    playerStats.m_speed = 1;
+    playerStats.m_crit = 50;
 
     Player player(name, 100, playerStats);
 
-    Stats* monsterStats = new Stats();
-    monsterStats->m_armor = 5;
-    monsterStats->m_damage = 25;
-    monsterStats->m_speed = 3;
+    Stats monsterStats;
+    monsterStats.m_armor = 5;
+    monsterStats.m_damage = 25;
+    monsterStats.m_speed = 3;
+    monsterStats.m_crit = 5;
 
     char monstersName[30] = "Monster";
     Monster monster1(monstersName, 50, monsterStats);
@@ -38,8 +40,15 @@ int main()
     GameManager manager;
     manager.manageEncounter(player, monsters);
 
-    delete playerStats;
-    delete monsterStats;
+    if(player.isAlive())
+    {
+        cout << "Victory !" << endl; // what a victory screen
+    }
+    else
+    {
+        cout << "Defeat ..." << endl; // what a game over screen;
+    }
+
 
     return 0;
 }

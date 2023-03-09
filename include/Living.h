@@ -10,14 +10,14 @@ using namespace std;
 class Living
 {
     public:
-        Living(char* name,  int health, Stats* stats);
+        Living(string name, int health, Stats stats);
         virtual ~Living();
 
 
         int health;
         int maxHealth;
-        char* name;
-        Stats* m_stats;
+        string name;
+        Stats m_stats;
 
         void takeDamage(int amount);
         void attack(Living* target);

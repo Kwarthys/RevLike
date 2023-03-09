@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <limits>
 
 using namespace std;
 
@@ -12,7 +13,8 @@ class PlayerInputs
         PlayerInputs();
         virtual ~PlayerInputs();
 
-        static int getPlayerChoice(std::vector<string> options);
+        static int getPlayerChoice(std::vector<string> options, bool enableCancel = true);
+        static void waitPlayerPause();
 
     protected:
 
