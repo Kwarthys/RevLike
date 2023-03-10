@@ -65,7 +65,7 @@ string Living::display()
     return data.str();
 }
 
-void Living::loot(Stats stats)
+void Living::loot(Loot loot)
 {
-    this->stats.add(stats);
+    this->stats.add(loot.stats);
 }

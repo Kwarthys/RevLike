@@ -10,12 +10,16 @@ GameManager::~GameManager()
     //dtor
 }
 
-void GameManager::manageLooting(Living& player, std::vector<Stats>& loots)
+void GameManager::manageLooting(Living& player, vector<Loot>& loots)
 {
+    cout << "\nLoot ! Choose one :" << endl;
+    Loot::horizontalLootsDisplay(loots);
+    cout << endl;
+
     vector<string> options;
     for(size_t i = 0; i < loots.size(); ++i)
     {
-        options.push_back(loots.at(i).display());
+        options.push_back(loots.at(i).name);
     }
 
     int choice = PlayerInputs::getPlayerChoice(options, false);

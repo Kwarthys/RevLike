@@ -38,25 +38,19 @@ int main()
     cout << "Hello " << player.name << endl;
 
     GameManager manager;
-    manager.manageEncounter(player, monsters);
+    //manager.manageEncounter(player, monsters);
 
 
 
     cout << player.stats.display();
 
-    Stats loot1;
-    loot1.m_armor = 1;
-
-    Stats loot2;
-    loot2.m_damage = 5;
-
-    Stats loot3;
-    loot3.m_crit = 5;
-
-    vector<Stats> loots;
-    loots.push_back(loot1);
-    loots.push_back(loot2);
-    loots.push_back(loot3);
+    vector<Loot> loots;
+    cout << "Generating loot1" << endl;
+    loots.push_back(Loot::generateRandomLoot(2));
+    cout << "Generating loot2" << endl;
+    loots.push_back(Loot::generateRandomLoot(5));
+    cout << "Generating loot3" << endl;
+    loots.push_back(Loot::generateRandomLoot(1));
 
     manager.manageLooting(player, loots);
 

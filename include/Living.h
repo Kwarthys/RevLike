@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include "Stats.h"
+#include "Loot.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ class Living
         Living(string name, int health, Stats stats);
         virtual ~Living();
 
+        bool isAlive(){return health > 0;}
 
         int health;
         int maxHealth;
@@ -21,9 +23,8 @@ class Living
 
         void takeDamage(int amount);
         void attack(Living& target);
-        bool isAlive(){return health > 0;}
 
-        void loot(Stats stats);
+        void loot(Loot loot);
 
         string display();
 

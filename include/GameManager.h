@@ -4,6 +4,7 @@
 #include <vector>
 #include "Living.h"
 #include "PlayerInputs.h"
+#include "Loot.h"
 
 class GameManager
 {
@@ -13,7 +14,7 @@ class GameManager
 
         void manageEncounter(Living& player, std::vector<Living*>& monsters);
 
-        void manageLooting(Living& player, std::vector<Stats>& loots);
+        void manageLooting(Living& player, std::vector<Loot>& loots);
 
     protected:
 

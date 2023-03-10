@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1678403753 source:e:\documents\codeblocksprojects\revlike\main.cpp
+1678452753 source:e:\documents\codeblocksprojects\revlike\main.cpp
 	<iostream>
 	<vector>
 	"GameManager.h"
@@ -7,13 +7,14 @@
 	"Monster.h"
 	"Stats.h"
 
-1678403539 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1678451775 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
-1678398916 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+1678449124 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
 	<vector>
 	"Living.h"
 	"PlayerInputs.h"
+	"Loot.h"
 
 1678365085 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
@@ -25,13 +26,14 @@
 1678211012 e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
 
-1678403493 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
+1678449400 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
 	"Living.h"
 
-1678403676 e:\documents\codeblocksprojects\revlike\include\living.h
+1678449409 e:\documents\codeblocksprojects\revlike\include\living.h
 	<iostream>
 	<sstream>
 	"Stats.h"
+	"Loot.h"
 
 1678364969 source:e:\documents\codeblocksprojects\revlike\src\monster.cpp
 	"Monster.h"
@@ -44,7 +46,7 @@
 	<string>
 	<sstream>
 
-1678403372 source:e:\documents\codeblocksprojects\revlike\src\stats.cpp
+1678403839 source:e:\documents\codeblocksprojects\revlike\src\stats.cpp
 	"Stats.h"
 
 1678368288 source:e:\documents\codeblocksprojects\revlike\src\playerinputs.cpp
@@ -54,4 +56,22 @@
 	<iostream>
 	<vector>
 	<limits>
+
+1678452825 source:e:\documents\codeblocksprojects\revlike\src\loot.cpp
+	"Loot.h"
+
+1678452226 e:\documents\codeblocksprojects\revlike\include\loot.h
+	<string>
+	<vector>
+	"Stats.h"
+	"DisplayManager.h"
+
+1678451597 source:e:\documents\codeblocksprojects\revlike\src\displaymanager.cpp
+	"DisplayManager.h"
+
+1678450669 e:\documents\codeblocksprojects\revlike\include\displaymanager.h
+	<string>
+	<vector>
+	<sstream>
+	<iostream>
 
