@@ -10,6 +10,8 @@ class Monster : public Living
         Monster(string name, int health, Stats stats);
         virtual ~Monster();
 
+        static Monster* generateRandomMonster(int level);
+
     protected:
 
     private:

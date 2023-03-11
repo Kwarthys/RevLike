@@ -21,40 +21,10 @@ int main()
 
     Player player(name, 100, playerStats);
 
-    Stats monsterStats;
-    monsterStats.m_armor = 5;
-    monsterStats.m_damage = 25;
-    monsterStats.m_speed = 3;
-    monsterStats.m_crit = 5;
-
-    char monstersName[30] = "Monster";
-    Monster monster1(monstersName, 50, monsterStats);
-    Monster monster2(monstersName, 50, monsterStats); //shared stats, this should not be an issue for now (will be with modifiers)
-
-    vector<Living*> monsters;
-    monsters.push_back(&monster1);
-    monsters.push_back(&monster2);
-
     cout << "Hello " << player.name << endl;
 
     GameManager manager;
-    //manager.manageEncounter(player, monsters);
-
-
-
-    cout << player.stats.display();
-
-    vector<Loot> loots;
-    cout << "Generating loot1" << endl;
-    loots.push_back(Loot::generateRandomLoot(2));
-    cout << "Generating loot2" << endl;
-    loots.push_back(Loot::generateRandomLoot(5));
-    cout << "Generating loot3" << endl;
-    loots.push_back(Loot::generateRandomLoot(1));
-
-    manager.manageLooting(player, loots);
-
-    cout << player.stats.display();
+    manager.playGame(player, 2);
 
     if(player.isAlive())
     {

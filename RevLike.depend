@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1678452753 source:e:\documents\codeblocksprojects\revlike\main.cpp
+1678555374 source:e:\documents\codeblocksprojects\revlike\main.cpp
 	<iostream>
 	<vector>
 	"GameManager.h"
@@ -7,14 +7,15 @@
 	"Monster.h"
 	"Stats.h"
 
-1678451775 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1678556621 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
-1678449124 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+1678556073 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
 	<vector>
 	"Living.h"
 	"PlayerInputs.h"
 	"Loot.h"
+	"Monster.h"
 
 1678365085 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
@@ -35,10 +36,10 @@
 	"Stats.h"
 	"Loot.h"
 
-1678364969 source:e:\documents\codeblocksprojects\revlike\src\monster.cpp
+1678556546 source:e:\documents\codeblocksprojects\revlike\src\monster.cpp
 	"Monster.h"
 
-1678403164 e:\documents\codeblocksprojects\revlike\include\monster.h
+1678555930 e:\documents\codeblocksprojects\revlike\include\monster.h
 	<iostream>
 	"Living.h"
 
@@ -57,7 +58,7 @@
 	<vector>
 	<limits>
 
-1678452825 source:e:\documents\codeblocksprojects\revlike\src\loot.cpp
+1678454920 source:e:\documents\codeblocksprojects\revlike\src\loot.cpp
 	"Loot.h"
 
 1678452226 e:\documents\codeblocksprojects\revlike\include\loot.h

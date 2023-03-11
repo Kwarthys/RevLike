@@ -10,6 +10,58 @@ GameManager::~GameManager()
     //dtor
 }
 
+void GameManager::playGame(Living& player, int numberOfTurn)
+{
+    int turn = 0;
+    int turnToLevelUp = 2;
+
+    while(turn < numberOfTurn && player.isAlive())
+    {
+        int turnLevel = turn / turnToLevelUp + 1;
+
+        /*** generate x monsters ***/
+        vector<Living*> monsters;
+        int nMonsters = rand() % 3 + 1;
+
+        if(nMonsters > turn+1)
+        {
+            nMonsters = turn+1;
+        }
+
+        for(int i = 0; i < nMonsters; ++i)
+        {
+            cout << "generating monster" << i << " level" << turnLevel << endl;
+            Monster* m = Monster::generateRandomMonster(turnLevel);
+            cout << "adding monster" << i << endl;
+            monsters.push_back(m);
+        }
+
+        cout << "FIGHT" << endl;
+
+        manageEncounter(player, monsters);
+
+        for(size_t i = 0; i < monsters.size(); ++i)
+        {
+            delete monsters.at(i);
+        }
+
+        if(player.isAlive())
+        {
+            vector<Loot> loots;
+            for(int i = 0; i < 3; ++i)
+            {
+                loots.push_back(Loot::generateRandomLoot(turnLevel));
+            }
+
+            manageLooting(player, loots);
+        }
+
+        player.health = player.maxHealth;//no regen potion for now
+
+        turn++;
+    }
+}
+
 void GameManager::manageLooting(Living& player, vector<Loot>& loots)
 {
     cout << "\nLoot ! Choose one :" << endl;
