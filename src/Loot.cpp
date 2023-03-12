@@ -82,50 +82,17 @@ void Loot::horizontalLootsDisplay(vector<Loot> loots)
 {
     int cellWidth = 20;
 
-    vector<string> names;
-    vector<string> lootsStats;//these are multiline strings
+    vector<string> multiLineStrings;
     for(size_t i = 0; i < loots.size(); ++i)
     {
         /*** Stats retrieve ***/
-        lootsStats.push_back(loots.at(i).stats.display());
+        string stats = loots.at(i).stats.display();
         /*** Name retrieve  ***/
-        names.push_back(loots.at(i).name);
+        string name = loots.at(i).name;
+
+        multiLineStrings.push_back(name + "\n" + stats);
     }
 
     /*** Name Display ***/
-    DisplayManager::horizontalDisplay(names, cellWidth);
-
-
-    string delimiter = "\n";
-    bool dowrite = true;
-    while(dowrite)
-    {
-        dowrite = false;
-        vector<string> lines;
-        for(size_t i = 0; i < lootsStats.size(); ++i)
-        {
-            string line;
-            int pos = lootsStats.at(i).find(delimiter);
-            if(pos != string::npos)
-            {
-                //found end of line
-                line = lootsStats.at(i).substr(0, pos);
-                lootsStats.at(i).erase(0, pos + delimiter.length());
-
-                dowrite = true;
-            }
-            else
-            {
-                //no more lines
-                line = " ";
-            }
-
-            lines.push_back(line);
-        }
-
-        if(dowrite)
-        {
-            DisplayManager::horizontalDisplay(lines, cellWidth);
-        }
-    }
+    DisplayManager::horizontalLinesDisplay(multiLineStrings, cellWidth);
 }

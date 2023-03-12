@@ -21,6 +21,7 @@ class Living
         string name;
         Stats stats;
 
+        void heal(int amount);
         void takeDamage(int amount);
         void attack(Living& target);
 

@@ -34,8 +34,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Consumable.h" />
 		<Unit filename="include/DisplayManager.h" />
 		<Unit filename="include/GameManager.h" />
+		<Unit filename="include/HealthPotion.h" />
 		<Unit filename="include/Living.h" />
 		<Unit filename="include/Loot.h" />
 		<Unit filename="include/Monster.h" />
@@ -43,8 +45,10 @@
 		<Unit filename="include/PlayerInputs.h" />
 		<Unit filename="include/Stats.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Consumable.cpp" />
 		<Unit filename="src/DisplayManager.cpp" />
 		<Unit filename="src/GameManager.cpp" />
+		<Unit filename="src/HealthPotion.cpp" />
 		<Unit filename="src/Living.cpp" />
 		<Unit filename="src/Loot.cpp" />
 		<Unit filename="src/Monster.cpp" />

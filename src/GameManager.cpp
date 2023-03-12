@@ -10,7 +10,7 @@ GameManager::~GameManager()
     //dtor
 }
 
-void GameManager::playGame(Living& player, int numberOfTurn)
+void GameManager::playGame(Player& player, int numberOfTurn)
 {
     int turn = 0;
     int turnToLevelUp = 2;
@@ -82,7 +82,7 @@ void GameManager::manageLooting(Living& player, vector<Loot>& loots)
     }
 }
 
-void GameManager::manageEncounter(Living& player, vector<Living*>& monsters)
+void GameManager::manageEncounter(Player& player, vector<Living*>& monsters)
 {
     bool monstersAlive = true;
     while(player.isAlive() && monstersAlive)

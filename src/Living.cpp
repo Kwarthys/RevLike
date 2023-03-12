@@ -36,6 +36,19 @@ void Living::takeDamage(int amount)
     std::cout << name << " takes " << reducedDamage << "(" << amount << "-" << stats.m_armor << ") damage.\n" << std::endl;
 }
 
+void Living::heal(int amount)
+{
+    int missingHealth = maxHealth - health;
+    if(amount < missingHealth)
+    {
+        health += amount;
+    }
+    else
+    {
+        health = maxHealth;
+    }
+}
+
 void Living::attack(Living& target)
 {
     int damage = stats.m_damage;
@@ -56,7 +69,7 @@ string Living::display()
     ostringstream data;
     if(isAlive())
     {
-        data << name << "(" << health << ") : " << stats.m_damage << "(" << stats.m_crit << "%) - " << stats.m_armor;
+        data << name << "(" << health << "/" << maxHealth << ") : " << stats.m_damage << "(" << stats.m_crit << "%) - " << stats.m_armor;
     }
     else
     {

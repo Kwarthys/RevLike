@@ -7,22 +7,25 @@
 	"Monster.h"
 	"Stats.h"
 
-1678556621 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1678624515 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
-1678556073 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+1678624540 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
 	<vector>
 	"Living.h"
 	"PlayerInputs.h"
 	"Loot.h"
 	"Monster.h"
+	"Player.h"
 
 1678365085 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
 
-1678365199 e:\documents\codeblocksprojects\revlike\include\player.h
+1678624839 e:\documents\codeblocksprojects\revlike\include\player.h
 	<iostream>
+	<vector>
 	"Living.h"
+	"Consumable.h"
 
 1678211012 e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
@@ -58,7 +61,7 @@
 	<vector>
 	<limits>
 
-1678454920 source:e:\documents\codeblocksprojects\revlike\src\loot.cpp
+1678623902 source:e:\documents\codeblocksprojects\revlike\src\loot.cpp
 	"Loot.h"
 
 1678452226 e:\documents\codeblocksprojects\revlike\include\loot.h
@@ -67,12 +70,24 @@
 	"Stats.h"
 	"DisplayManager.h"
 
-1678451597 source:e:\documents\codeblocksprojects\revlike\src\displaymanager.cpp
+1678623918 source:e:\documents\codeblocksprojects\revlike\src\displaymanager.cpp
 	"DisplayManager.h"
 
-1678450669 e:\documents\codeblocksprojects\revlike\include\displaymanager.h
+1678623681 e:\documents\codeblocksprojects\revlike\include\displaymanager.h
 	<string>
 	<vector>
 	<sstream>
 	<iostream>
+
+1678624257 source:e:\documents\codeblocksprojects\revlike\src\consumable.cpp
+	"Consumable.h"
+
+1678624286 e:\documents\codeblocksprojects\revlike\include\consumable.h
+	<string>
+
+1678624713 source:e:\documents\codeblocksprojects\revlike\src\healthpotion.cpp
+	"HealthPotion.h"
+
+1678624795 e:\documents\codeblocksprojects\revlike\include\healthpotion.h
+	"Consumable.h"
 

@@ -14,7 +14,9 @@ class DisplayManager
         DisplayManager();
         virtual ~DisplayManager();
 
-        static void horizontalDisplay(vector<string> strings, int cellWidth);
+        static void horizontalLineDisplay(vector<string> strings, int cellWidth);
+
+        static void horizontalLinesDisplay(vector<string> multiLineStrings, int cellWidth);
 
     protected:
 

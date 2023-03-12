@@ -6,6 +6,7 @@
 #include "PlayerInputs.h"
 #include "Loot.h"
 #include "Monster.h"
+#include "Player.h"
 
 class GameManager
 {
@@ -13,9 +14,9 @@ class GameManager
         GameManager();
         virtual ~GameManager();
 
-        void playGame(Living& player, int numberOfTurn);
+        void playGame(Player& player, int numberOfTurn);
 
-        void manageEncounter(Living& player, std::vector<Living*>& monsters);
+        void manageEncounter(Player& player, std::vector<Living*>& monsters);
 
         void manageLooting(Living& player, std::vector<Loot>& loots);
 
