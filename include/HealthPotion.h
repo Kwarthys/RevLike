@@ -11,6 +11,8 @@ class HealthPotion : public Consumable
         HealthPotion(string name);
         virtual ~HealthPotion();
 
+        void use(Living* owner) override;
+
         int healAmount = 50;
 
     protected:

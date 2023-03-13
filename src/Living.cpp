@@ -17,7 +17,7 @@ void Living::takeDamage(int amount)
 {
     if(!isAlive())
     {
-        std::cout << "bonk" << std::endl;
+        cout << "bonk" << endl;
         return;
     }
 
@@ -33,7 +33,7 @@ void Living::takeDamage(int amount)
         health = 0;
     }
 
-    std::cout << name << " takes " << reducedDamage << "(" << amount << "-" << stats.m_armor << ") damage.\n" << std::endl;
+    cout << name << " takes " << reducedDamage << "(" << amount << "-" << stats.m_armor << ") damage.\n" << endl;
 }
 
 void Living::heal(int amount)
@@ -53,11 +53,11 @@ void Living::attack(Living& target)
 {
     int damage = stats.m_damage;
 
-    std::cout << name << " attacks " << target.name << std::endl;
+    cout << name << " attacks " << target.name << endl;
 
     if(rand()%100+1 < stats.m_crit)
     {
-        std::cout << "CRIT" << std::endl;
+        cout << "CRIT" << endl;
         damage *= 2;
     }
 
@@ -69,11 +69,11 @@ string Living::display()
     ostringstream data;
     if(isAlive())
     {
-        data << name << "(" << health << "/" << maxHealth << ") : " << stats.m_damage << "(" << stats.m_crit << "%) - " << stats.m_armor;
+        data << name << " " << health << "/" << maxHealth << " \nDamage: " << stats.m_damage << "\nCrit: " << stats.m_crit << "%)\nArmor: " << stats.m_armor << "\n";
     }
     else
     {
-        data << "Dead" << endl;
+        data << "Dead\n";
     }
     return data.str();
 }
@@ -81,4 +81,15 @@ string Living::display()
 void Living::loot(Loot loot)
 {
     this->stats.add(loot.stats);
+}
+
+void Living::horizontalDisplay(vector<Living*>& livings)
+{
+    vector<string> data;
+    for(size_t i=0; i < livings.size(); ++i)
+    {
+        data.push_back(livings.at(i)->display());
+    }
+
+    DisplayManager::horizontalLinesDisplay(data, 50);
 }

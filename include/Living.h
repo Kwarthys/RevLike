@@ -3,8 +3,10 @@
 
 #include <iostream>
 #include <sstream>
+#include <vector>
 #include "Stats.h"
 #include "Loot.h"
+#include "DisplayManager.h"
 
 using namespace std;
 
@@ -24,6 +26,8 @@ class Living
         void heal(int amount);
         void takeDamage(int amount);
         void attack(Living& target);
+
+        static void horizontalDisplay(vector<Living*>& livings);
 
         void loot(Loot loot);
 

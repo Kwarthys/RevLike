@@ -18,6 +18,11 @@ class GameManager
 
         void manageEncounter(Player& player, std::vector<Living*>& monsters);
 
+        bool manageAttacks(Living& player, std::vector<Living*>& monsters);
+        bool manageItems(Player& player, std::vector<Living*>& monsters);       //Player here cause we need the inventory
+
+        void manageMonstersTurn(Living& player, std::vector<Living*>& monsters);
+
         void manageLooting(Living& player, std::vector<Loot>& loots);
 
     protected:

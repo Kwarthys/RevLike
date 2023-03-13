@@ -14,7 +14,7 @@ class PlayerInputs
         virtual ~PlayerInputs();
 
         static int getPlayerChoice(std::vector<string> options, bool enableCancel = true);
-        static void waitPlayerPause();
+        static void waitPlayerPause(bool ignore = true);
 
     protected:
 

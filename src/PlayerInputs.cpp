@@ -29,10 +29,13 @@ int PlayerInputs::getPlayerChoice(std::vector<string> options, bool enableCancel
     return response - 1;
 }
 
-void PlayerInputs::waitPlayerPause()
+void PlayerInputs::waitPlayerPause(bool ignore)
 {
     cout << "\nPress Enter to continue";
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); //does not work twice in a row
+    if(ignore)
+    {
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); //does not work twice in a row
+    }
     cin.get();
     cout << endl;
 }
