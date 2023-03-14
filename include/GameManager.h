@@ -2,6 +2,8 @@
 #define GAMEMANAGER_H
 
 #include <vector>
+#include "HealthPotion.h"
+#include "Consumable.h"
 #include "Living.h"
 #include "PlayerInputs.h"
 #include "Loot.h"

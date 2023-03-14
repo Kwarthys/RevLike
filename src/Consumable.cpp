@@ -10,4 +10,4 @@ Consumable::~Consumable()
     //dtor
 }
 
-void Consumable::use(Living* owner){}
+void Consumable::use(Living& target){}

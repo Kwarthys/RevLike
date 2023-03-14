@@ -7,21 +7,23 @@
 	"Monster.h"
 	"Stats.h"
 
-1678713621 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1678803047 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
-1678713644 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+1678802959 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
 	<vector>
+	"HealthPotion.h"
+	"Consumable.h"
 	"Living.h"
 	"PlayerInputs.h"
 	"Loot.h"
 	"Monster.h"
 	"Player.h"
 
-1678365085 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
+1678802538 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
 
-1678624839 e:\documents\codeblocksprojects\revlike\include\player.h
+1678802546 e:\documents\codeblocksprojects\revlike\include\player.h
 	<iostream>
 	<vector>
 	"Living.h"
@@ -30,7 +32,7 @@
 1678211012 e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
 
-1678713085 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
+1678803257 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
 	"Living.h"
 
 1678712888 e:\documents\codeblocksprojects\revlike\include\living.h
@@ -55,7 +57,7 @@
 1678403839 source:e:\documents\codeblocksprojects\revlike\src\stats.cpp
 	"Stats.h"
 
-1678712442 source:e:\documents\codeblocksprojects\revlike\src\playerinputs.cpp
+1678803291 source:e:\documents\codeblocksprojects\revlike\src\playerinputs.cpp
 	"PlayerInputs.h"
 
 1678712433 e:\documents\codeblocksprojects\revlike\include\playerinputs.h
@@ -81,16 +83,17 @@
 	<sstream>
 	<iostream>
 
-1678624994 source:e:\documents\codeblocksprojects\revlike\src\consumable.cpp
+1678801939 source:e:\documents\codeblocksprojects\revlike\src\consumable.cpp
 	"Consumable.h"
 
-1678624948 e:\documents\codeblocksprojects\revlike\include\consumable.h
+1678801946 e:\documents\codeblocksprojects\revlike\include\consumable.h
 	<string>
+	<sstream>
 	"Living.h"
 
-1678712381 source:e:\documents\codeblocksprojects\revlike\src\healthpotion.cpp
+1678803011 source:e:\documents\codeblocksprojects\revlike\src\healthpotion.cpp
 	"HealthPotion.h"
 
-1678712403 e:\documents\codeblocksprojects\revlike\include\healthpotion.h
+1678802931 e:\documents\codeblocksprojects\revlike\include\healthpotion.h
 	"Consumable.h"
 

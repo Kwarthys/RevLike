@@ -38,15 +38,21 @@ void Living::takeDamage(int amount)
 
 void Living::heal(int amount)
 {
+    int amountHealed;
+
     int missingHealth = maxHealth - health;
     if(amount < missingHealth)
     {
         health += amount;
+        amountHealed = amount;
     }
     else
     {
         health = maxHealth;
+        amountHealed = missingHealth;
     }
+
+    cout << name << " regains " << amountHealed << " hps." << endl;
 }
 
 void Living::attack(Living& target)

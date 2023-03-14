@@ -15,6 +15,9 @@ void GameManager::playGame(Player& player, int numberOfTurn)
     int turn = 0;
     int turnToLevelUp = 2;
 
+    HealthPotion* hp = new HealthPotion();
+    player.inventory.push_back(hp);
+
     while(turn < numberOfTurn && player.isAlive())
     {
         int turnLevel = turn / turnToLevelUp + 1;
@@ -75,16 +78,47 @@ void GameManager::manageLooting(Living& player, vector<Loot>& loots)
     }
 
     int choice = PlayerInputs::getPlayerChoice(options, false);
+    size_t unsignedChoice = choice;
 
-    if(choice >= 0 && choice < loots.size())
+    if(choice >= 0)
     {
-        player.loot(loots.at(choice));
+        if(unsignedChoice < loots.size())
+        {
+            player.loot(loots.at(choice));
+        }
     }
 }
 
 bool GameManager::manageItems(Player& player, std::vector<Living*>& monsters)
 {
     //use potions, maybe throw grenades
+
+    vector<string> itemsStats;
+    vector<string> options;
+    for(size_t i = 0; i < player.inventory.size(); ++i)
+    {
+        //for items display
+        itemsStats.push_back(player.inventory.at(i)->display());
+
+        //for item selection
+        options.push_back(player.inventory.at(i)->name);
+    }
+
+    DisplayManager::horizontalLinesDisplay(itemsStats, 50);
+
+    cout << "What item to use ?" << endl;
+    int choice = PlayerInputs::getPlayerChoice(options);
+    size_t unsignedChoice = choice;
+
+    if(choice >= 0)
+    {
+        if(unsignedChoice < player.inventory.size())
+        {
+            player.useItem(choice, player);
+            return true;
+        }
+    }
+
     return false;
 }
 
@@ -99,12 +133,16 @@ bool GameManager::manageAttacks(Living& player, std::vector<Living*>& monsters)
     }
 
     int choice = PlayerInputs::getPlayerChoice(options);
-    if(choice >= 0 && choice < monsters.size())
+    size_t unsignedChoice = choice;
+    if(choice >= 0 )
     {
-        player.attack(*monsters.at(choice));
-        if(!monsters.at(choice)->isAlive())
+        if(unsignedChoice < monsters.size())
         {
-            cout << "\nYou killed " << monsters.at(choice)->name << " !\n" << endl;
+            player.attack(*monsters.at(choice));
+            if(!monsters.at(choice)->isAlive())
+            {
+                cout << "\nYou killed " << monsters.at(choice)->name << " !\n" << endl;
+            }
         }
 
        PlayerInputs::waitPlayerPause();
@@ -137,6 +175,7 @@ void GameManager::manageEncounter(Player& player, vector<Living*>& monsters)
     bool monstersAlive = true;
     while(player.isAlive() && monstersAlive)
     {
+        cout << "------------------------------------------" << endl; //new turn visual hint
         cout << player.display() << endl;
         Living::horizontalDisplay(monsters);
 

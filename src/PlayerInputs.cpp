@@ -25,7 +25,7 @@ int PlayerInputs::getPlayerChoice(std::vector<string> options, bool enableCancel
     cout << "What will you do ?" << endl;
     int response;
     cin >> response;
-
+    cout << endl << endl;
     return response - 1;
 }
 

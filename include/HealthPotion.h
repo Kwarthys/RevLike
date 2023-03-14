@@ -8,10 +8,11 @@ using namespace std;
 class HealthPotion : public Consumable
 {
     public:
-        HealthPotion(string name);
+        HealthPotion();
         virtual ~HealthPotion();
 
-        void use(Living* owner) override;
+        void use(Living& target) override;
+        virtual string display() override;
 
         int healAmount = 50;
 
