@@ -59,8 +59,6 @@ void GameManager::playGame(Player& player, int numberOfTurn)
             manageLooting(player, loots);
         }
 
-        player.health = player.maxHealth;//no regen potion for now
-
         turn++;
     }
 }
@@ -145,8 +143,6 @@ bool GameManager::manageAttacks(Living& player, std::vector<Living*>& monsters)
             }
         }
 
-       PlayerInputs::waitPlayerPause();
-
        return true;
     }
 
@@ -201,6 +197,8 @@ void GameManager::manageEncounter(Player& player, vector<Living*>& monsters)
                 didAction = true;
             }
         }
+
+        PlayerInputs::waitPlayerPause();
 
         if(player.isAlive())
         {
