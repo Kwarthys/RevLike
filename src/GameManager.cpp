@@ -15,6 +15,8 @@ void GameManager::playGame(Player& player, int numberOfTurn)
     int turn = 0;
     int turnToLevelUp = 2;
 
+    MonsterFactory monsterFactory;
+
     HealthPotion* hp = new HealthPotion();
     player.inventory.push_back(hp);
 
@@ -23,6 +25,7 @@ void GameManager::playGame(Player& player, int numberOfTurn)
         int turnLevel = turn / turnToLevelUp + 1;
 
         /*** generate x monsters ***/
+        /*
         vector<Living*> monsters;
         int nMonsters = rand() % 3 + 1;
 
@@ -38,6 +41,9 @@ void GameManager::playGame(Player& player, int numberOfTurn)
             cout << "adding monster" << i << endl;
             monsters.push_back(m);
         }
+        */
+
+        vector<Living*> monsters = monsterFactory.getRandomMonsters((turn+1) * 3);
 
         cout << "FIGHT" << endl;
 

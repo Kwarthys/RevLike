@@ -41,6 +41,7 @@
 		<Unit filename="include/Living.h" />
 		<Unit filename="include/Loot.h" />
 		<Unit filename="include/Monster.h" />
+		<Unit filename="include/MonsterFactory.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/PlayerInputs.h" />
 		<Unit filename="include/Stats.h" />
@@ -52,6 +53,7 @@
 		<Unit filename="src/Living.cpp" />
 		<Unit filename="src/Loot.cpp" />
 		<Unit filename="src/Monster.cpp" />
+		<Unit filename="src/MonsterFactory.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Unit filename="src/PlayerInputs.cpp" />
 		<Unit filename="src/Stats.cpp" />

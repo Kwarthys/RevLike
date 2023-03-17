@@ -7,8 +7,8 @@
 #include "Living.h"
 #include "PlayerInputs.h"
 #include "Loot.h"
-#include "Monster.h"
 #include "Player.h"
+#include "MonsterFactory.h"
 
 class GameManager
 {

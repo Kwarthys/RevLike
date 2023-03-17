@@ -7,18 +7,18 @@
 	"Monster.h"
 	"Stats.h"
 
-1678803047 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1679050616 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
-1678802959 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+1679050433 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
 	<vector>
 	"HealthPotion.h"
 	"Consumable.h"
 	"Living.h"
 	"PlayerInputs.h"
 	"Loot.h"
-	"Monster.h"
 	"Player.h"
+	"MonsterFactory.h"
 
 1678802538 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
@@ -46,7 +46,7 @@
 1678556546 source:e:\documents\codeblocksprojects\revlike\src\monster.cpp
 	"Monster.h"
 
-1678555930 e:\documents\codeblocksprojects\revlike\include\monster.h
+1679048096 e:\documents\codeblocksprojects\revlike\include\monster.h
 	<iostream>
 	"Living.h"
 
@@ -96,4 +96,12 @@
 
 1678802931 e:\documents\codeblocksprojects\revlike\include\healthpotion.h
 	"Consumable.h"
+
+1679050661 source:e:\documents\codeblocksprojects\revlike\src\monsterfactory.cpp
+	"MonsterFactory.h"
+
+1679050502 e:\documents\codeblocksprojects\revlike\include\monsterfactory.h
+	<vector>
+	<random>
+	"Monster.h"
 

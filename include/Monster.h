@@ -12,6 +12,8 @@ class Monster : public Living
 
         static Monster* generateRandomMonster(int level);
 
+        int monsterCost = 5;
+
     protected:
 
     private:
