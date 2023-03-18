@@ -37,6 +37,7 @@
 		<Unit filename="include/Consumable.h" />
 		<Unit filename="include/DisplayManager.h" />
 		<Unit filename="include/GameManager.h" />
+		<Unit filename="include/Grenade.h" />
 		<Unit filename="include/HealthPotion.h" />
 		<Unit filename="include/Living.h" />
 		<Unit filename="include/Loot.h" />
@@ -49,6 +50,7 @@
 		<Unit filename="src/Consumable.cpp" />
 		<Unit filename="src/DisplayManager.cpp" />
 		<Unit filename="src/GameManager.cpp" />
+		<Unit filename="src/Grenade.cpp" />
 		<Unit filename="src/HealthPotion.cpp" />
 		<Unit filename="src/Living.cpp" />
 		<Unit filename="src/Loot.cpp" />

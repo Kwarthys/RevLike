@@ -10,15 +10,15 @@ HealthPotion::~HealthPotion()
     //dtor
 }
 
-void HealthPotion::use(Living& target)
+void HealthPotion::use(Living& player, vector<Living*>& monsters)
 {
-    target.heal(healAmount);
+    player.heal(healAmount);
     charges -= 1;
 }
 
 string HealthPotion::display()
 {
     ostringstream data;
-    data << "Health Potion\n" << charges << " charges\nHeals " << healAmount << " health points.\n";
+    data << name << "\n" << charges << " charges\nHeals " << healAmount << " health points.\n";
     return data.str();
 }

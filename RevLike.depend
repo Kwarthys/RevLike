@@ -7,12 +7,13 @@
 	"Monster.h"
 	"Stats.h"
 
-1679141503 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
+1679142474 source:e:\documents\codeblocksprojects\revlike\src\gamemanager.cpp
 	"GameManager.h"
 
-1679050433 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
+1679142486 e:\documents\codeblocksprojects\revlike\include\gamemanager.h
 	<vector>
 	"HealthPotion.h"
+	"Grenade.h"
 	"Consumable.h"
 	"Living.h"
 	"PlayerInputs.h"
@@ -20,10 +21,10 @@
 	"Player.h"
 	"MonsterFactory.h"
 
-1678802538 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
+1679142418 source:e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
 
-1678802546 e:\documents\codeblocksprojects\revlike\include\player.h
+1679142409 e:\documents\codeblocksprojects\revlike\include\player.h
 	<iostream>
 	<vector>
 	"Living.h"
@@ -32,7 +33,7 @@
 1678211012 e:\documents\codeblocksprojects\revlike\src\player.cpp
 	"Player.h"
 
-1678803257 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
+1679141817 source:e:\documents\codeblocksprojects\revlike\src\living.cpp
 	"Living.h"
 
 1678712888 e:\documents\codeblocksprojects\revlike\include\living.h
@@ -83,18 +84,19 @@
 	<sstream>
 	<iostream>
 
-1678801939 source:e:\documents\codeblocksprojects\revlike\src\consumable.cpp
+1679142190 source:e:\documents\codeblocksprojects\revlike\src\consumable.cpp
 	"Consumable.h"
 
-1678801946 e:\documents\codeblocksprojects\revlike\include\consumable.h
+1679142195 e:\documents\codeblocksprojects\revlike\include\consumable.h
 	<string>
 	<sstream>
+	<vector>
 	"Living.h"
 
-1678803011 source:e:\documents\codeblocksprojects\revlike\src\healthpotion.cpp
+1679142342 source:e:\documents\codeblocksprojects\revlike\src\healthpotion.cpp
 	"HealthPotion.h"
 
-1678802931 e:\documents\codeblocksprojects\revlike\include\healthpotion.h
+1679142213 e:\documents\codeblocksprojects\revlike\include\healthpotion.h
 	"Consumable.h"
 
 1679141042 source:e:\documents\codeblocksprojects\revlike\src\monsterfactory.cpp
@@ -104,4 +106,10 @@
 	<vector>
 	<random>
 	"Monster.h"
+
+1679142361 source:e:\documents\codeblocksprojects\revlike\src\grenade.cpp
+	"Grenade.h"
+
+1679142208 e:\documents\codeblocksprojects\revlike\include\grenade.h
+	"Consumable.h"
 

@@ -20,6 +20,9 @@ void GameManager::playGame(Player& player, int numberOfTurn)
     HealthPotion* hp = new HealthPotion();
     player.inventory.push_back(hp);
 
+    Grenade* grenade = new Grenade();
+    player.inventory.push_back(grenade);
+
     while((turn < numberOfTurn || numberOfTurn == 0) && player.isAlive()) // numberOfTurns of 0 means infinite
     {
         int turnLevel = turn / turnToLevelUp + 1;
@@ -100,7 +103,7 @@ bool GameManager::manageItems(Player& player, std::vector<Living*>& monsters)
     {
         if(unsignedChoice < player.inventory.size())
         {
-            player.useItem(choice, player);
+            player.useItem(choice, player, monsters);
             return true;
         }
     }

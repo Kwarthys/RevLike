@@ -9,5 +9,3 @@ Consumable::~Consumable()
 {
     //dtor
 }
-
-void Consumable::use(Living& target){}

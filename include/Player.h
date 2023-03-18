@@ -15,7 +15,7 @@ class Player : public Living
         virtual ~Player();
 
         vector<Consumable*> inventory;
-        void useItem(int itemIndex, Living& target);
+        void useItem(int itemIndex, Living& player, vector<Living*>& monsters);
 
     protected:
 

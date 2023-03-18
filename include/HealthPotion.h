@@ -11,7 +11,7 @@ class HealthPotion : public Consumable
         HealthPotion();
         virtual ~HealthPotion();
 
-        void use(Living& target) override;
+        void use(Living& player, std::vector<Living*>& monsters) override;
         virtual string display() override;
 
         int healAmount = 50;

@@ -7,12 +7,12 @@ Player::Player(string name, int maxHealth, Stats stats) : Living(name, maxHealth
 Player::~Player()
 {}
 
-void Player::useItem(int itemIndex, Living& target)
+void Player::useItem(int itemIndex, Living& player, vector<Living*>& monsters)
 {
     if(itemIndex >= 0 && itemIndex < inventory.size())
     {
         Consumable* item = inventory.at(itemIndex);
-        item->use(target);
+        item->use(player, monsters);
 
         if(item->charges == 0)
         {

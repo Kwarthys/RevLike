@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "HealthPotion.h"
+#include "Grenade.h"
 #include "Consumable.h"
 #include "Living.h"
 #include "PlayerInputs.h"
