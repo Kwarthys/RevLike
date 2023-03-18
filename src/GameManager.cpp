@@ -20,30 +20,12 @@ void GameManager::playGame(Player& player, int numberOfTurn)
     HealthPotion* hp = new HealthPotion();
     player.inventory.push_back(hp);
 
-    while(turn < numberOfTurn && player.isAlive())
+    while((turn < numberOfTurn || numberOfTurn == 0) && player.isAlive()) // numberOfTurns of 0 means infinite
     {
         int turnLevel = turn / turnToLevelUp + 1;
 
         /*** generate x monsters ***/
-        /*
-        vector<Living*> monsters;
-        int nMonsters = rand() % 3 + 1;
-
-        if(nMonsters > turn+1)
-        {
-            nMonsters = turn+1;
-        }
-
-        for(int i = 0; i < nMonsters; ++i)
-        {
-            cout << "generating monster" << i << " level" << turnLevel << endl;
-            Monster* m = Monster::generateRandomMonster(turnLevel);
-            cout << "adding monster" << i << endl;
-            monsters.push_back(m);
-        }
-        */
-
-        vector<Living*> monsters = monsterFactory.getRandomMonsters((turn+1) * 3);
+        vector<Living*> monsters = monsterFactory.getRandomMonsters((turn+1) * 3, turnLevel);
 
         cout << "FIGHT" << endl;
 
@@ -177,10 +159,10 @@ void GameManager::manageEncounter(Player& player, vector<Living*>& monsters)
     bool monstersAlive = true;
     while(player.isAlive() && monstersAlive)
     {
-        cout << "------------------------------------------" << endl; //new turn visual hint
+        DisplayManager::displayEndOfCombatAction();
         cout << player.display() << endl;
         Living::horizontalDisplay(monsters);
-
+        cout << endl;
 
         bool didAction = false;
         while(!didAction)
@@ -205,6 +187,7 @@ void GameManager::manageEncounter(Player& player, vector<Living*>& monsters)
         }
 
         PlayerInputs::waitPlayerPause();
+        DisplayManager::displayEndOfCombatAction();
 
         if(player.isAlive())
         {
@@ -221,5 +204,7 @@ void GameManager::manageEncounter(Player& player, vector<Living*>& monsters)
             }
         }
     }
+
     cout << "End of encounter" << endl;
+    DisplayManager::displayEndOfEncounter();
 }

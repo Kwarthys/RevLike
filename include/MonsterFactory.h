@@ -14,12 +14,12 @@ class MonsterFactory
         enum MonsterType{Giant, Goblin};
         std::vector<MonsterType> ALL_MONSTERS{Giant, Goblin};
 
-        Monster* getThisMonster(MonsterType type);
+        Monster* getThisMonster(MonsterType type, int level);
 
-        Monster* getRandomMonster(int budget);
-        std::vector<Living*> getRandomMonsters(int budget);
+        Monster* getRandomMonster(int budget, int level);
+        std::vector<Living*> getRandomMonsters(int budget, int level);
 
-        int getMonsterCost(MonsterType type);
+        int getMonsterCost(MonsterType type, int level);
 
     protected:
 

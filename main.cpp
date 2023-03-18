@@ -24,7 +24,7 @@ int main()
     cout << "Hello " << player.name << endl;
 
     GameManager manager;
-    manager.playGame(player, 2);
+    manager.playGame(player, 0); //0 for infinite
 
     if(player.isAlive())
     {

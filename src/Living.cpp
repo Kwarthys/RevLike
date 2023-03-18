@@ -97,5 +97,5 @@ void Living::horizontalDisplay(vector<Living*>& livings)
         data.push_back(livings.at(i)->display());
     }
 
-    DisplayManager::horizontalLinesDisplay(data, 50);
+    DisplayManager::horizontalLinesDisplay(data, 20);
 }

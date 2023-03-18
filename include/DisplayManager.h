@@ -18,6 +18,9 @@ class DisplayManager
 
         static void horizontalLinesDisplay(vector<string> multiLineStrings, int cellWidth);
 
+        static void displayEndOfEncounter(){cout << "--------------------------------------" << endl;}
+        static void displayEndOfCombatAction(){cout << "--------------------" << endl;}
+
     protected:
 
     private:

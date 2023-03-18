@@ -39,7 +39,7 @@ DisplayManager::~DisplayManager()
         for(size_t i = 0; i < multiLineStrings.size(); ++i)
         {
             string line;
-            int pos = multiLineStrings.at(i).find(delimiter);
+            size_t pos = multiLineStrings.at(i).find(delimiter);
             if(pos != string::npos)
             {
                 //found end of line
